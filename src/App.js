@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./components/Banner";
+import Card from "./components/Cards";
+import Container from "./components/Container";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Videos from "./json/db.json";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+    <Banner image="favoritos" />
+    <Container>
+
+      <h2>Geografia</h2>
+      <section className="cards">
+        { Videos.map((video) => <Card id={video.id} key={video.id} /> )}
+      </section>
+    </Container>
+    <Footer /> 
+    </>
   );
 }
 
