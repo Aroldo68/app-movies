@@ -1,10 +1,14 @@
-function Category() {
+import styles from "./Caterory.module.css";
+
+function Category({ category, children }) {
     return (
         <section className={style.category}>
-            <h2>Geografia</h2>
-            <section>
-            
-            </section>
+            <h2>{category}</h2>
+            <div>
+                { children }
+            </div>
         </section>
     );
 }
+
+export default Category;
