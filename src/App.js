@@ -6,6 +6,18 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Videos from "./json/videos.json";
 
+const categories = [
+  "Geografia",
+  "Como fazer e usar",
+  "Astronomia e Geografia",
+  "Climatologia, Meteorologia, Vegetação",
+  "Geologia e Hidrografia"
+]
+
+function filterCategory() {
+  return Videos.filter( video => video.category === categories[id] )
+}
+
 function App() {
   return (
     <>
@@ -13,15 +25,11 @@ function App() {
     <Banner image="favoritos" />
     <Container>
 
-      {/* <h2>Geografia</h2>
-      <section className="cards">
-        { Videos.map((video) => <Card id={video.id} key={video.id} /> )}
-      </section> */ }
-
-        <Category category="geografia">
+     
+        {/* <Category category="geografia">
           { Videos.map((video) => <Card id={video.id} key={video.id} /> )}
 
-        </Category>
+        </Category> */}
 
     </Container>
     <Footer /> 

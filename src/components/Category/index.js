@@ -2,7 +2,7 @@ import styles from "./Caterory.module.css";
 
 function Category({ category, children }) {
     return (
-        <section className={style.category}>
+        <section className={styles.category}>
             <h2>{category}</h2>
             <div>
                 { children }
