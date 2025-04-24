@@ -2,9 +2,14 @@ import styles from "./SearchVideoList.module.css";
 import VideoList from "../../components/VideoList";
 import { use, useState } from "react";
 
+//Filtrando videos por categoria ou titulo
+function filterVideos(videos, searchText) {
+    return videos.filter((video) => video.category.includes(searchText) || video.title.includes(searchText))
+}
+
 function SearchVideoList({ videos }) {
 
-    const [ searchText, setSearchText ] = useState()
+    const [ searchText, setSearchText ] = useState("")
     const foundVideos = filterVideos(videos, searchText)
 
     return (
@@ -12,9 +17,13 @@ function SearchVideoList({ videos }) {
             <input 
                 type="search"
                 placeholder="Pesquisar...."
-                onChange={}
+                value={searchText}
+                onChange={event => setSearchText(event.target.value)}
             />
-            <VideoList videos={videos} />
+            <VideoList
+                videos={foundVideos} 
+                emptyHeading={'Sem vídeos sobre "${searchText}"'}
+            />
         </section>
     );
 }
