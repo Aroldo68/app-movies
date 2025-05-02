@@ -22,3 +22,5 @@ function Carousel({ children }) {
         </div>
     );
 }
+
+export default Carousel;
