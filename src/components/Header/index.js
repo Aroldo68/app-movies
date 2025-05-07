@@ -9,8 +9,8 @@ function Header() {
             </Link>
             <nav>
                 <Link to="/">Inicio</Link>
-                <Link to="/watch">Assistir</Link>
                 <Link to="/search">Pesquisar</Link>
+                <Link to="/favorites">Favoritos</Link>
             </nav>
 
         </header>

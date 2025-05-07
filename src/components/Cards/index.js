@@ -7,6 +7,9 @@ function Card({ id }) {
             <Link to={`/watch/${id}`} >
                 <img src={`https://img.youtube.com/vi/${id}/mqdefault.jpg`} alt="Capa"/>
             </Link>
+            <figure>
+                
+            </figure>
 
         </section>
     );
