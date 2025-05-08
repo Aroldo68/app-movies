@@ -1,6 +1,7 @@
 import styles from "./SearchVideoList.module.css";
 import VideoList from "../../components/VideoList";
-import { use, useState } from "react";
+import { useState } from "react";
+//import SearchVideoList from "../../components/SearchVideoList";
 
 //Filtrando videos por categoria ou titulo
 function filterVideos(videos, searchText) {
@@ -9,7 +10,7 @@ function filterVideos(videos, searchText) {
 
 function SearchVideoList({ videos }) {
 
-    const [ searchText, setSearchText ] = useState("")
+    const [ searchText, setSearchText ] = useState('')
     const foundVideos = filterVideos(videos, searchText)
 
     return (
@@ -22,7 +23,7 @@ function SearchVideoList({ videos }) {
             />
             <VideoList
                 videos={foundVideos} 
-                emptyHeading={'Sem vídeos sobre "${searchText}"'}
+                emptyHeading={`Sem vídeos sobre "${searchText}"`}
             />
         </section>
     );
