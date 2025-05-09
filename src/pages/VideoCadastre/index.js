@@ -1,9 +1,10 @@
 import Header from "../../components/Header";
 import Container from "../../components/Container";
+import Form from "../../components/Form";
 import Footer from "../../components/Footer";
-import { Form } from "react-router-dom";
 
 function VideoCadastre() {
+
     return (
         <>
             <Header />
